@@ -17,8 +17,7 @@ class ApiInterceptor extends Interceptor {
     // Add authentication token if available
     final token = await _storage.getToken();
     if (token != null && token.isNotEmpty) {
-      options.headers[ApiConstants.authorization] =
-          ApiConstants.bearerToken(token);
+      options.headers['Authorization'] = 'Bearer $token';
       _logger.d('🔑 Token added to request: ${options.path}');
     }
 

@@ -58,6 +58,29 @@ class AppConstants {
   static const String passwordPattern =
       r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$';
 
+  /// Password must contain at least one uppercase letter
+  static const String passwordUppercasePattern = r'[A-Z]';
+  
+  /// Password must contain at least one lowercase letter
+  static const String passwordLowercasePattern = r'[a-z]';
+  
+  /// Password must contain at least one digit
+  static const String passwordDigitPattern = r'[0-9]';
+  
+  /// Password must contain at least one special character
+  static const String passwordSpecialCharPattern = r'[!@#$%^&*(),.?":{}|<>_\-+=\[\]\\\/]';
+  
+  /// International phone number pattern
+  /// Accepts: +XXX... (country code required for international)
+  /// Example: +243123456789, +33612345678, +1234567890
+  static const String internationalPhonePattern = r'^\+?[1-9]\d{1,14}$';
+
+  /// Numeric only pattern
+  static const String numericPattern = r'^[0-9]+$';
+
+    /// Name pattern (letters, spaces, hyphens, apostrophes, accented characters)
+  static const String namePattern = r'^[a-zA-ZÀ-ÿ\s\-\']+$';
+
   // ============================================================================
   // UI Constants
   // ============================================================================
